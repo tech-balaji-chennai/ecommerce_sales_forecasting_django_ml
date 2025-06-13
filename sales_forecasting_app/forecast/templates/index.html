@@ -1,0 +1,39 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Forecasting</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sales Forecasting Tool</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="marketing_spend">Marketing Spend:</label>
+            <input type="number" step="0.01" name="marketing_spend" required>
+
+            <label for="season">Season (1–4):</label>
+            <input type="number" name="season" min="1" max="4" required>
+
+            <label for="product_type">Product Type (as number):</label>
+            <input type="number" name="product_type" required>
+
+            <button type="submit">Predict Sales</button>
+
+            <div style="text-align: center;">
+                <a href="/plot/">
+                    <button type="button">Visualize Trends</button>
+                </a>
+            </div>
+
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <h2>Predicted Sales: ₹{{ prediction }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

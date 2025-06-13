@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Forecast Visualization</title>
+</head>
+<body>
+    <h2>Sales Forecast Visualization</h2>
+    {% if plot_exists %}
+        <img src="{% static 'sales_forecast_plot.png' %}" alt="Sales Forecast Plot" style="max-width:100%; height:auto;">
+    {% else %}
+        <p>No visualizations present.</p>
+    {% endif %}
+</body>
+</html>

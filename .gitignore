@@ -28,5 +28,5 @@ Thumbs.db
 *.log
 
 # Model and plot files (optional)
-# ml_model/*.pkl
-# forecast/static/sales_plot.png
+ml_model/*.pkl
+forecast/static/sales_plot.png
