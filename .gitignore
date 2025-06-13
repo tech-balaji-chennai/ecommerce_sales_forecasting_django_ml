@@ -1,0 +1,32 @@
+# Ignore virtual environment
+.venv/
+
+# Ignore environment files
+.env
+
+# Ignore IDE settings and files (PyCharm, VS Code, etc.)
+.idea/
+.vscode/
+
+# Ignore Python cache (Byte-compiled / optimized / DLL files)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Django migrations and lightweight database
+*/migrations/
+db.sqlite3
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs files
+*.log
+
+# Model and plot files (optional)
+# ml_model/*.pkl
+# forecast/static/sales_plot.png
